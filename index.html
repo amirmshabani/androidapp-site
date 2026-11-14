@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+<base target="_blank">
 </head>
 <body>
 
@@ -21,24 +22,37 @@
   </header>
 
   <section class="hero">
+    <canvas id="bg3d"></canvas>
     <div class="hero-text reveal">
-      <h1>خریدت رو با خانواده <span>هماهنگ</span> کن</h1>
+      <h1>خریدت رو با خانواده <span class="grad-text">هماهنگ</span> کن</h1>
       <p>یک لیست مشترک، یک کد ساده. هر کس از هر جایی ببیند چه چیزی کم داریم.</p>
       <div class="hero-actions">
         <a href="downloads/shoplist.apk" class="btn btn-primary" download>دانلود مستقیم APK</a>
         <button class="btn btn-disabled" disabled>دانلود از مایکت — به زودی</button>
       </div>
+      <div class="hero-stats">
+        <div class="stat"><strong data-count="6">۰</strong><span>حرف کد اشتراک</span></div>
+        <div class="stat"><strong data-count="100">۰</strong><span>٪ رایگان</span></div>
+        <div class="stat"><strong data-count="3">۰</strong><span>قدم تا شروع</span></div>
+      </div>
     </div>
 
-    <div class="phone reveal" aria-hidden="true">
-      <div class="screen">
-        <div class="card done">شیر</div>
-        <div class="card">ماکارونی</div>
-        <div class="card">دلستر</div>
-        <div class="card done">سویا</div>
-        <div class="card">نان سنگک</div>
-        <div class="card">پنیر</div>
+    <div class="phone-wrap reveal" aria-hidden="true">
+      <div class="phone" id="phone">
+        <div class="phone-glow"></div>
+        <div class="screen">
+          <div class="notch"></div>
+          <div class="card done">شیر</div>
+          <div class="card">ماکارونی</div>
+          <div class="card">دلستر</div>
+          <div class="card done">سویا</div>
+          <div class="card">نان سنگک</div>
+          <div class="card">پنیر</div>
+        </div>
       </div>
+      <div class="orbit orbit-1">🥛</div>
+      <div class="orbit orbit-2">🧀</div>
+      <div class="orbit orbit-3">🍞</div>
     </div>
   </section>
 
@@ -46,42 +60,42 @@
     <h2 class="section-title reveal">امکانات برنامه</h2>
     <p class="section-sub reveal">همه‌چیز برای خرید راحت‌تر، بدون پیچیدگی</p>
     <div class="features">
-      <article class="feature reveal">
+      <article class="feature reveal" data-tilt>
         <div class="icon">📝</div>
         <h3>ساخت لیست با نام</h3>
         <p>لیست‌ها را با نام دلخواه، مثل «خرید هفتگی» یا «جشن تولد»، بسازید.</p>
       </article>
-      <article class="feature reveal">
+      <article class="feature reveal" data-tilt>
         <div class="icon">🔑</div>
         <h3>کد اشتراک</h3>
         <p>با یک کد ۶ حرفی، لیست را با همسرتان به اشتراک بگذارید.</p>
       </article>
-      <article class="feature reveal">
+      <article class="feature reveal" data-tilt>
         <div class="icon">✅</div>
         <h3>تیک زدن هوشمند</h3>
         <p>کالاهای خریده‌شده خط می‌خورند و رنگشان تغییر می‌کند تا جا نیفتند.</p>
       </article>
-      <article class="feature reveal">
+      <article class="feature reveal" data-tilt>
         <div class="icon">↕️</div>
         <h3>جابه‌جایی آسان</h3>
         <p>با کشیدن دستگیره‌ی ☰، ترتیب کالاها را طبق مسیر فروشگاه تنظیم کنید.</p>
       </article>
-      <article class="feature reveal">
+      <article class="feature reveal" data-tilt>
         <div class="icon">📊</div>
         <h3>نمایش پیشرفت</h3>
         <p>همیشه ببینید چند کالا خریده شده و چه چیزی هنوز مانده است.</p>
       </article>
-      <article class="feature reveal">
+      <article class="feature reveal" data-tilt>
         <div class="icon">📤</div>
         <h3>اشتراک‌گذاری</h3>
         <p>لیست را به صورت متن در واتس‌اپ، تلگرام یا هر برنامه‌ی دیگری بفرستید.</p>
       </article>
-      <article class="feature reveal">
+      <article class="feature reveal" data-tilt>
         <div class="icon">🕘</div>
         <h3>لیست‌های اخیر</h3>
         <p>لیست‌های قبلی در صفحه‌ی اصلی ذخیره می‌شوند تا سریع دوباره باز کنید.</p>
       </article>
-      <article class="feature reveal">
+      <article class="feature reveal" data-tilt>
         <div class="icon">🧹</div>
         <h3>پاکسازی سریع</h3>
         <p>همه‌ی کالاهای خریده‌شده را با یک دکمه از لیست حذف کنید.</p>
@@ -93,21 +107,21 @@
     <h2 class="section-title reveal">چطور کار می‌کند؟</h2>
     <p class="section-sub reveal">سه قدم تا یک خرید مشترک</p>
     <div class="steps">
-      <div class="step reveal">
+      <div class="step reveal" data-tilt>
         <div class="step-num">۱</div>
         <div>
           <h3>لیست را بسازید</h3>
           <p>کالاها را اضافه کنید و روی «ساخت کد اشتراک» بزنید.</p>
         </div>
       </div>
-      <div class="step reveal">
+      <div class="step reveal" data-tilt>
         <div class="step-num">۲</div>
         <div>
           <h3>کد را بفرستید</h3>
           <p>کد ۶ حرفی را برای همسرتان ارسال کنید.</p>
         </div>
       </div>
-      <div class="step reveal">
+      <div class="step reveal" data-tilt>
         <div class="step-num">۳</div>
         <div>
           <h3>خرید را هماهنگ کنید</h3>
@@ -121,7 +135,7 @@
     <h2 class="section-title">دانلود برنامه</h2>
     <p class="section-sub">همین حالا لیست خرید خانوادگی‌تان را شروع کنید</p>
     <div class="hero-actions">
-      <a href="downloads/shoplist.apk" class="btn btn-primary" download>دانلود مستقیم APK</a>
+      <a href="downloads/shoplist.apk" class="btn btn-primary btn-3d" download>دانلود مستقیم APK</a>
       <button class="btn btn-disabled" disabled>دانلود از مایکت — به زودی</button>
     </div>
     <p class="note">فایل APK را روی گوشی نصب کنید. ممکن است لازم باشد «نصب از منابع ناشناس» را فعال کنید.</p>
@@ -132,6 +146,7 @@
     <p><a href="https://amirmshabani.ir" target="_blank" rel="noopener">amirmshabani.ir</a></p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
