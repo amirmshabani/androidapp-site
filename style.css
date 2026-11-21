@@ -461,3 +461,17 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
   * { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+.myket-badge {
+  display: inline-block;
+  transition: transform 0.2s, filter 0.2s;
+}
+.myket-badge img {
+  display: block;
+  height: 56px;
+  width: auto;
+}
+.myket-badge:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.3));
+}
