@@ -475,3 +475,20 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
   transform: translateY(-3px);
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.3));
 }
+
+.hero-actions {
+  align-items: center;
+}
+.hero-actions .btn,
+.hero-actions .myket-badge {
+  height: 56px;
+  min-width: 190px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.myket-badge img {
+  display: block;
+  height: 56px;
+  width: auto;
+}
